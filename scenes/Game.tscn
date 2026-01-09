@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://58e5y184rnrs"]
+
+[ext_resource type="Script" uid="uid://c8ghjsewlwhge" path="res://scenes/game.gd" id="1_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://b45ajutovsmyb" path="res://carrom_new.tscn" id="2_78awf"]
+[ext_resource type="PackedScene" uid="uid://whfvxem12qa3" path="res://striker.tscn" id="3_aug50"]
+[ext_resource type="PackedScene" uid="uid://bl14rm0cv2u4u" path="res://scenes/board.tscn" id="3_s0nni"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_cpr0p")
+carrom = ExtResource("2_78awf")
+striker = ExtResource("3_aug50")
+metadata/_edit_vertical_guides_ = [-69.0, 71.0, -71.0, 218.0, 213.0]
+metadata/_edit_horizontal_guides_ = [-70.0, 69.0, -70.0, 70.0, 0.0, 0.0]
+
+[node name="board" parent="." instance=ExtResource("3_s0nni")]
+position = Vector2(6, -2)

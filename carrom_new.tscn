@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b45ajutovsmyb"]
+
+[ext_resource type="Texture2D" uid="uid://rirta5pq3601" path="res://assets/placeholder.png" id="1_vyssj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vyssj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyssj"]
+size = Vector2(16, 16)
+
+[node name="Node2D" type="RigidBody2D"]
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_vyssj")
+gravity_scale = 0.0
+metadata/_edit_vertical_guides_ = [28.0]
+metadata/_edit_horizontal_guides_ = [25.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1.1324883e-06)
+scale = Vector2(0.8, 0.8421054)
+texture = ExtResource("1_vyssj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vyssj")
