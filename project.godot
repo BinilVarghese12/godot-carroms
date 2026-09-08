@@ -13,4 +13,4 @@ config_version=5
 config/name="alevel component 3"
 run/main_scene="uid://b7opye253gpxf"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"

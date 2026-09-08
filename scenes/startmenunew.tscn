@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbt3dn53wkiw3"]
 
-[ext_resource type="Script" uid="uid://dtuscktlm2n4j" path="res://startmenu.gd" id="1_rho6t"]
-[ext_resource type="PackedScene" uid="uid://d0xtwjd6c3y8e" path="res://player_Setup.tscn" id="2_f42ru"]
-[ext_resource type="Texture2D" uid="uid://vd0ccorii4l3" path="res://assets/carooom_clash.png" id="2_rho6t"]
+[ext_resource type="Script" uid="uid://dtuscktlm2n4j" path="res://scripts/startmenu.gd" id="1_jgyw3"]
+[ext_resource type="PackedScene" uid="uid://d0xtwjd6c3y8e" path="res://scenes/player_Setup.tscn" id="2_jjkqk"]
+[ext_resource type="Texture2D" uid="uid://vd0ccorii4l3" path="res://assets/carooom_clash.png" id="3_ecju7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,8 +15,8 @@ offset_right = -44.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rho6t")
-player_setup = ExtResource("2_f42ru")
+script = ExtResource("1_jgyw3")
+player_setup = ExtResource("2_jjkqk")
 metadata/_edit_vertical_guides_ = [-112.0, -426.0, 574.0]
 metadata/_edit_horizontal_guides_ = [-70.0, -268.0, 14.0]
 
@@ -45,7 +45,7 @@ layout_mode = 2
 [node name="start" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "start"
-icon = ExtResource("2_rho6t")
+icon = ExtResource("3_ecju7")
 flat = true
 
 [node name="quit" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5pxr3vm1lpik"
-path="res://.godot/imported/black_carrom_new.png-ddb4b92eb7720b8760a71ce9de9569c1.ctex"
+uid="uid://dpny3duoh22ji"
+path="res://.godot/imported/black_carrom_new.png-fd69ede09bbeecd5a53a13aeab201a00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/black_carrom_new.png"
-dest_files=["res://.godot/imported/black_carrom_new.png-ddb4b92eb7720b8760a71ce9de9569c1.ctex"]
+source_file="res://black_carrom_new.png"
+dest_files=["res://.godot/imported/black_carrom_new.png-fd69ede09bbeecd5a53a13aeab201a00.ctex"]
 
 [params]
 
