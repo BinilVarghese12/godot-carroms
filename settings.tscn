@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpxof8ldmnlbe"]
+
+[ext_resource type="Script" uid="uid://bx2mcqaqd0ntf" path="res://control.gd" id="1_x2hje"]
+[ext_resource type="PackedScene" uid="uid://58e5y184rnrs" path="res://scenes/Game.tscn" id="2_nkug2"]
+[ext_resource type="Texture2D" uid="uid://wpwt7bel27ty" path="res://assets/Large Buttons/Large Buttons/Back Button.png" id="3_cj1lu"]
+[ext_resource type="Texture2D" uid="uid://dtg0lf3wd8h44" path="res://assets/Large Buttons/Large Buttons/Quit Button.png" id="4_71mqq"]
+[ext_resource type="Texture2D" uid="uid://dr004mh7t4jhl" path="res://assets/Square Buttons/Square Buttons/Back Square Button.png" id="5_3j6r5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x2hje")
+game_scene = ExtResource("2_nkug2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.029000001
+offset_left = 3.0
+offset_top = 23.792
+offset_right = 110.0
+offset_bottom = 45.0
+
+[node name="Friction" type="CheckButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "Friction"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.030000001
+anchor_top = 0.15200001
+anchor_right = -0.030000001
+anchor_bottom = 0.15200001
+offset_left = 231.56
+offset_top = 21.50399
+offset_right = 839.56
+offset_bottom = 231.504
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("3_cj1lu")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.030000001
+anchor_top = 0.15200001
+anchor_right = -0.030000001
+anchor_bottom = 0.15200001
+offset_left = 233.56
+offset_top = 67.50399
+offset_right = 841.56
+offset_bottom = 275.504
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("4_71mqq")
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = -107.0
+offset_top = 125.00001
+offset_right = 101.0
+offset_bottom = 333.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("5_3j6r5")
+
+[connection signal="toggled" from="VBoxContainer/Friction" to="." method="_on_friction_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_apply_pressed"]

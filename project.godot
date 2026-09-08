@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="alevel component 3"
-run/main_scene="uid://58e5y184rnrs"
+run/main_scene="uid://b7opye253gpxf"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"

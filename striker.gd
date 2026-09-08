@@ -1,17 +1,13 @@
 extends RigidBody2D
 
-@export var speed := 500
+@export var speed := 2000
 var can_shoot := true
 
 func _physics_process(_delta: float) -> void:
-	if not can_shoot:
-		return
+	pass
+	
 
-	if Input.is_action_just_pressed("ui_accept"):
-		shoot_towards(get_global_mouse_position())
-	speed = speed * 0.8
-
-func shoot_towards(target: Vector2) -> void:
+func shoot_towards(target: Vector2, power: float) :
 	can_shoot = false
-	var dir := (target - global_position).normalized()
-	apply_impulse(dir * speed)
+	var dir := (global_position - target).normalized()
+	linear_velocity = dir * power *5

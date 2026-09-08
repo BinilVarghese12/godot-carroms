@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0xtwjd6c3y8e"]
+
+[ext_resource type="Script" uid="uid://dtuscktlm2n4j" path="res://startmenu.gd" id="1_ked4m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ked4m")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 12.0
+offset_right = 895.0
+offset_bottom = 524.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 64.0
+offset_right = 369.5625
+offset_bottom = 95.0
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 108.0
+offset_right = 364.5625
+offset_bottom = 139.0
+
+[node name="LineEdit4" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 154.0
+offset_right = 364.5625
+offset_bottom = 185.0
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 183.0
+offset_right = 513.0
+offset_bottom = 240.0
+text = "change names"
+
+[connection signal="text_submitted" from="LineEdit" to="." method="player1"]
+[connection signal="text_submitted" from="LineEdit2" to="." method="player2"]
+[connection signal="text_submitted" from="LineEdit3" to="." method="player3"]
+[connection signal="text_submitted" from="LineEdit4" to="." method="player4"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]

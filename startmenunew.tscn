@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbt3dn53wkiw3"]
+
+[ext_resource type="Script" uid="uid://dtuscktlm2n4j" path="res://startmenu.gd" id="1_rho6t"]
+[ext_resource type="PackedScene" uid="uid://d0xtwjd6c3y8e" path="res://player_Setup.tscn" id="2_f42ru"]
+[ext_resource type="Texture2D" uid="uid://vd0ccorii4l3" path="res://assets/carooom_clash.png" id="2_rho6t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = 15.0
+offset_right = -44.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rho6t")
+player_setup = ExtResource("2_f42ru")
+metadata/_edit_vertical_guides_ = [-112.0, -426.0, 574.0]
+metadata/_edit_horizontal_guides_ = [-70.0, -268.0, 14.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -2103.0
+offset_top = -441.0
+offset_right = 1778.0
+offset_bottom = 2236.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "start"
+icon = ExtResource("2_rho6t")
+flat = true
+
+[node name="quit" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "quit"
+flat = true
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/quit" to="." method="_on_quit_pressed"]

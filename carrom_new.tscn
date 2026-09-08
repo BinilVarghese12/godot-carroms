@@ -4,8 +4,8 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vyssj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyssj"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vyssj"]
+radius = 8.0
 
 [node name="Node2D" type="RigidBody2D"]
 mass = 100.0
@@ -20,4 +20,4 @@ scale = Vector2(0.8, 0.8421054)
 texture = ExtResource("1_vyssj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_vyssj")
+shape = SubResource("CircleShape2D_vyssj")

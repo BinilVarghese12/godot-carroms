@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://bl14rm0cv2u4u"]
 
-[ext_resource type="Texture2D" uid="uid://dfsho7sest1op" path="res://assets/BOARD.png" id="1_bw3vb"]
+[ext_resource type="Texture2D" uid="uid://bkjsrukq2i17b" path="res://assets/board_new_123.png" id="1_bw3vb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ibkli"]
 friction = 0.0
 bounce = 50.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbsmt"]
-size = Vector2(642, 47)
+size = Vector2(642, 47.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpr0p"]
 size = Vector2(29.5, 643)
@@ -16,21 +16,23 @@ size = Vector2(29.5, 643)
 size = Vector2(607, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0nni"]
-size = Vector2(43, 567)
+size = Vector2(23, 616)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aug50"]
-radius = 22.0
+radius = 14.142136
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kiw3p"]
-radius = 22.090721
+radius = 13.038404
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_400sg"]
-radius = 22.090721
+radius = 14.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4kob"]
-radius = 23.0
+radius = 14.3178215
 
 [node name="board" type="Node2D"]
+metadata/_edit_vertical_guides_ = [3.0]
+metadata/_edit_horizontal_guides_ = [231.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7, 10)
@@ -41,37 +43,37 @@ position = Vector2(-4, 0)
 physics_material_override = SubResource("PhysicsMaterial_ibkli")
 
 [node name="bottom wall" type="CollisionShape2D" parent="sidewalls"]
-position = Vector2(5, 312)
+position = Vector2(3, 322)
 shape = SubResource("RectangleShape2D_qbsmt")
 
 [node name="right wall" type="CollisionShape2D" parent="sidewalls"]
-position = Vector2(283.25, 10)
+position = Vector2(294, 6)
 shape = SubResource("RectangleShape2D_cpr0p")
 
 [node name="top wall" type="CollisionShape2D" parent="sidewalls"]
-position = Vector2(-16, -294)
+position = Vector2(-7, -304)
 shape = SubResource("RectangleShape2D_78awf")
 
 [node name="left wall" type="CollisionShape2D" parent="sidewalls"]
-position = Vector2(-296.5, 9.5)
+position = Vector2(-294, 9)
 shape = SubResource("RectangleShape2D_s0nni")
 
 [node name="pockets" type="Area2D" parent="."]
 
 [node name="bottom left" type="CollisionShape2D" parent="pockets"]
-position = Vector2(-253, 264)
+position = Vector2(-263, 274)
 shape = SubResource("CircleShape2D_aug50")
 
 [node name="bottom right" type="CollisionShape2D" parent="pockets"]
-position = Vector2(239, 266)
+position = Vector2(249, 275)
 shape = SubResource("CircleShape2D_kiw3p")
 
 [node name="top right" type="CollisionShape2D" parent="pockets"]
-position = Vector2(239, -243)
+position = Vector2(250, -253)
 shape = SubResource("CircleShape2D_400sg")
 
 [node name="top left" type="CollisionShape2D" parent="pockets"]
-position = Vector2(-254, -244)
+position = Vector2(-263, -254)
 shape = SubResource("CircleShape2D_g4kob")
 
 [node name="Camera2D" type="Camera2D" parent="."]

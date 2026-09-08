@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7opye253gpxf"]
+
+[ext_resource type="Script" uid="uid://dtuscktlm2n4j" path="res://startmenu.gd" id="1_kj28g"]
+[ext_resource type="PackedScene" uid="uid://cs6t11wrw5iix" path="res://test12.tscn" id="2_kj28g"]
+[ext_resource type="Texture2D" uid="uid://c4rb3j0n4da53" path="res://assets/Square Buttons/Square Buttons/Play Square Button.png" id="3_kpj2f"]
+[ext_resource type="Texture2D" uid="uid://cunc4qcbvrxql" path="res://assets/Square Buttons/Square Buttons/On Off Square Button.png" id="4_hftdl"]
+[ext_resource type="Texture2D" uid="uid://ckbf6ronl4547" path="res://assets/logogoggog.png" id="5_hftdl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 14.0
+offset_right = 200.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kj28g")
+player_setup = ExtResource("2_kj28g")
+metadata/_edit_vertical_guides_ = [-112.0, -426.0, 574.0]
+metadata/_edit_horizontal_guides_ = [-70.0, -268.0, 14.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -212.0
+offset_top = -6.0
+offset_right = 952.0
+offset_bottom = 639.0
+color = Color(0.118508734, 0.52971554, 0.7410518, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -242.0
+offset_top = 6.0
+offset_right = 654.0
+offset_bottom = 537.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="start" type="Button" parent="ColorRect/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = -175.0
+offset_top = 498.0
+offset_right = 33.0
+offset_bottom = 706.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("3_kpj2f")
+
+[node name="quit" type="Button" parent="ColorRect/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = -286.0
+offset_top = 498.0
+offset_right = -78.0
+offset_bottom = 706.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("4_hftdl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(373, 300.00003)
+scale = Vector2(0.5349121, 0.48632813)
+texture = ExtResource("5_hftdl")
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Label/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Label/quit" to="." method="_on_quit_pressed"]
